@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>SellSnap | フリマ画像一括加工</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SellSnap</h1>
+            <p class="subtitle">フリマ画像をプロ級に一括加工</p>
+        </header>
+
+        <section class="upload-section" id="dropZone">
+            <span class="upload-icon">📸</span>
+            <p>加工したい写真を選択</p>
+            <p class="subtitle">（複数選択・カメラ撮影OK）</p>
+            <label for="fileInput" class="upload-btn">写真を選ぶ</label>
+            <input type="file" id="fileInput" accept="image/*" multiple>
+        </section>
+
+        <section class="condition-section">
+            <h2 class="section-title">商品の状態を選択</h2>
+            <div class="condition-grid">
+                <button class="condition-btn" data-value="新品未使用">
+                    <i>✨</i>
+                    <span>新品未使用</span>
+                </button>
+                <button class="condition-btn" data-value="極美品">
+                    <i>💎</i>
+                    <span>極美品</span>
+                </button>
+                <button class="condition-btn active" data-value="美品">
+                    <i>👍</i>
+                    <span>美品</span>
+                </button>
+                <button class="condition-btn" data-value="良品">
+                    <i>✅</i>
+                    <span>良品</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallerySection">
+            <h2 class="section-title">プレビュー</h2>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+    </div>
+
+    <div class="action-footer" id="actionFooter">
+        <button class="save-all-btn" id="saveAllBtn">全枚数を連続保存する</button>
+    </div>
+
+    <div class="overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p id="loadingText">加工中...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
