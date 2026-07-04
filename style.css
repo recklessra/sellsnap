@@ -139,7 +139,7 @@ h1 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 15px;
 }
 
@@ -310,7 +310,7 @@ input[type="range"] {
 }
 
 /* Responsive adjustments */
-@media (max-width: 350px) {
+@media (max-width: 600px) {
   .condition-grid {
     grid-template-columns: 1fr;
   }
