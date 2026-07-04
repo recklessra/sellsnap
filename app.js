@@ -239,7 +239,7 @@ function createPreviewCard(item, index) {
     const controls = document.createElement('div');
     controls.className = 'preview-controls';
     
-    const conditions = ['新品未使用', '極美品', '美品', '良品'];
+    const conditions = ['新品未開封', '新品未使用', '極美品', '美品', '良品'];
     let conditionHtml = `<div class="mini-condition-grid">`;
     conditions.forEach(c => {
         conditionHtml += `<button class="mini-btn ${item.condition === c ? 'active' : ''}" data-val="${c}">${c}</button>`;
